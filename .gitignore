@@ -26,3 +26,12 @@ test/config/cache*
 /output
 .vscode/
 .fleet/
+
+# Local dev files
+*.log
+*.local.md
+*.local.just
+local/
+local.mk
+/mihomo
+/mihomo-*

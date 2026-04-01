@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net"
 	"sync"
+	"time"
 
 	"github.com/metacubex/mihomo/adapter/inbound"
 	"github.com/metacubex/mihomo/common/utils"
@@ -94,6 +95,7 @@ func (m *Mieru) Listen(tunnel C.Tunnel) error {
 				if !m.server.IsRunning() {
 					break
 				} else {
+					time.Sleep(10 * time.Millisecond)
 					continue
 				}
 			}
