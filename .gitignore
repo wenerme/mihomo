@@ -31,6 +31,7 @@ test/config/cache*
 *.log
 *.local.md
 *.local.just
+*_local_test.go
 local/
 local.mk
 /mihomo

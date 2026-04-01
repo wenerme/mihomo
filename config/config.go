@@ -592,6 +592,8 @@ func DefaultRawConfig() *RawConfig {
 }
 
 func UnmarshalRawConfig(buf []byte) (*RawConfig, error) {
+	buf = preprocessEnv(buf)
+
 	// config with default value
 	rawCfg := DefaultRawConfig()
 
