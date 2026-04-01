@@ -113,6 +113,10 @@ func (f *Fetcher[V]) loadBuf(buf []byte, hash utils.HashType, updateFile bool) (
 		return lo.Empty[V](), true, nil
 	}
 
+	if f.vehicle.Type() == P.File {
+		buf = PreprocessEnv(buf)
+	}
+
 	contents, err := f.parser(buf)
 	if err != nil {
 		f.backoff.AddAttempt() // add a failed attempt to backoff

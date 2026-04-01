@@ -27,6 +27,9 @@ test/config/cache*
 .vscode/
 .fleet/
 
+# Agent docs
+.agents/
+
 # Local dev files
 *.log
 *.local.md
